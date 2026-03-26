@@ -1,12 +1,12 @@
 ## Project Evolution
 
-This project follows a structured, iterative approach to understanding and predicting creative fatigue in digital advertising.
+This project follows a structured and iterative approach to understanding and predicting creative fatigue in paid social advertising.
 
-- **v1 – Initial Approach**  
-  Implemented a rule-based fatigue labeling strategy using strict threshold conditions (e.g., consecutive CTR drops). This approach provided a starting point but resulted in limited fatigue detection and class imbalance.
+- **Initial Phase: Rule-Based Labelling**
+The study began with a rule-based fatigue labelling strategy based on consecutive declines in Click-Through Rate (CTR). While this provided an initial foundation, it resulted in limited fatigue detection and introduced class imbalance due to overly strict conditions.
 
-- **v2 – Modeling & Experimentation**  
-  Explored machine learning techniques under the initial labeling framework, including class imbalance handling methods such as SMOTE and ADASYN, along with ensemble-based models. This phase focused on improving fatigue detection performance and understanding model behavior.
+- **Experimentation Phase: Modeling & Imbalance Handling**
+In this phase, multiple machine learning models were explored, including Logistic Regression, Random Forest, and XGBoost. Due to the imbalance created by the initial labelling approach, techniques such as SMOTE and ADASYN were applied to improve minority class detection. This phase focused on evaluating model performance, understanding the limitations of linear approaches, and analyzing the impact of different balancing techniques.
 
-- **Final – Refined Methodology (In Progress)**  
-  The final version focuses on improving the fatigue labeling strategy using a sustained post-peak performance decline approach, along with enhanced modeling and interpretability techniques. This stage aims to provide a more robust and scalable framework for fatigue prediction.
+- **Final Phase: Refined Methodology & Temporal Analysis**
+The final version adopts a more robust fatigue definition based on sustained post-peak CTR decline, resulting in a more realistic and stable target variable. The modeling approach was refined, with XGBoost delivering the most consistent and reliable performance. To enhance interpretability, SHAP analysis was used to identify key drivers of fatigue. In addition, survival analysis techniques were incorporated to capture the temporal dynamics of creative fatigue, including the Kaplan–Meier survival curve to estimate fatigue probability over time and the Cox Proportional Hazards model to analyze the influence of features on the hazard of fatigue occurrence.
